@@ -22,6 +22,7 @@ This project is being built with scalability and clean architecture in mind, fol
 Frontend:
 - React + Vite (for project initialization)
 - TypeScript
+- Tailwind CSS (https://tailwindcss.com/)
 
 Backend (planned / in progress):
 - Node.js (API layer)
@@ -101,7 +102,7 @@ It performs:
 1. Build stage using Node
 2. Serve stage using Nginx
 
-## 1. Build the Docker Image
+## 1. Build the Docker Image (Requires Docker Desktop)
 
 From inside `apps/web`:  
 `docker build -t [desired-image-name] .`

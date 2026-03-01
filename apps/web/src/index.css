@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+/* default styling created during Vite scaffolding, will remove later and use tailwind */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
