@@ -20,9 +20,10 @@ This project is being built with scalability and clean architecture in mind, fol
 # Tech Stack
 
 Frontend:
-- React + Vite (for project initialization)
+- React + Vite (for project initialization https://vite.dev/guide/)
 - TypeScript
 - Tailwind CSS (https://tailwindcss.com/)
+- React Router (Client side page routing https://reactrouter.com/start/declarative/routing)
 
 Backend (planned / in progress):
 - Node.js (API layer)
