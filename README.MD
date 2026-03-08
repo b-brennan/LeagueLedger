@@ -27,8 +27,11 @@ Frontend:
 
 Backend (planned / in progress):
 - Node.js (API layer)
+- Express (https://expressjs.com/en/guide/routing.html)
+
+Database (planned / in progress):
+- Prisma (https://www.prisma.io/docs)
 - PostgreSQL
-- Supabase ?
 
 Containerization (Docker):
 - Multi-stage Docker build for production-ready frontend image
@@ -71,6 +74,25 @@ The production build outputs static assets into: `apps/web/dist`
 These assets are served via Nginx in Docker.
 
 ---
+
+### apps/api
+
+The relevant backend code is stored in `apps/api/src`  
+
+`routes/`  
+Difines API endpoints and request routing, e.g /singup
+
+`services/`
+Contains core business logic, e.g Username validation
+
+`server.ts`  
+Responsible for:
+- Initializing the Express app
+- Registering routes
+- Configuring middleware 
+- Starting the API server
+
+NOTE: not yet connected to frontend
 
 # Running Locally (Without Docker)
 
