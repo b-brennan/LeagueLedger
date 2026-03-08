@@ -82,7 +82,7 @@ The relevant backend code is stored in `apps/api/src`
 `routes/`  
 Difines API endpoints and request routing, e.g /singup
 
-`services/`
+`services/`  
 Contains core business logic, e.g Username validation
 
 `server.ts`  
