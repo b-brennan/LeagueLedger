@@ -1,4 +1,10 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@leagueledger/types": ["../../packages/types"]
+    }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

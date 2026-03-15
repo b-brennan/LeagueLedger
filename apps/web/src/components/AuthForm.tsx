@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { AuthRequest } from '../../../../packages/types';
+import type { AuthRequest } from "@leagueledger/types";
 
 type Props = {
     onSubmit: (data: AuthRequest) =>Promise<void>

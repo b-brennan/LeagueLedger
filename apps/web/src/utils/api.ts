@@ -1,5 +1,5 @@
 import axios, {type AxiosInstance } from 'axios';
-import type { AuthResponse, AuthRequest } from '../../../../packages/types';
+import type { AuthResponse, AuthRequest } from "@leagueledger/types";
 
 
 const api: AxiosInstance = axios.create({

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { authApi } from "../utils/api";
 import AuthForm from '../components/AuthForm';
-import type { AuthResponse, AuthRequest } from '../../../../packages/types';
+import type { AuthResponse, AuthRequest } from "@leagueledger/types";
 
 export default function Signup() {
   const [response, setResponse] = useState<AuthResponse | null>(null);

@@ -1,0 +1,8 @@
+{
+  "name": "leagueledger",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
