@@ -3,25 +3,24 @@ import { authApi } from "../utils/api";
 import AuthForm from '../components/AuthForm';
 import type { AuthResponse, AuthRequest } from '../../../../packages/types';
 
-export default function Login() {
+export default function Signup() {
   const [response, setResponse] = useState<AuthResponse | null>(null);
 
-  // submit login request with username/password input values
-  async function handleLogin(data: AuthRequest) {
+  // submit sign-up requestwith username/password input values
+  async function handleSignup(data: AuthRequest) {
    
     try {
-      const res = await authApi.login(data);
-      console.log(res.data)
+      const res = await authApi.signup(data);
       setResponse(res.data);
     } catch (err) {
       console.log("there was an error with the sign up request", err);
     }
   }
 
-  // Login form
+  // Sign-up form
   return (
     <>
-      <AuthForm onSubmit={handleLogin} cardTitle="Login" response={response?.message}/>
+      <AuthForm onSubmit={handleSignup} cardTitle="Sign Up" response={response?.message} />
     </>
   )
 }

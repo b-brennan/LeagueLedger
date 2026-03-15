@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import { isUniqueUsername } from '../services/authServices';
 
@@ -14,7 +14,7 @@ export interface User {
 const Users: User[] = [];
 
 // create new user record with hashed password (unsure best practices of status' to return)
-router.post('/signup', async (req, res) => {
+router.post('/signup', async (req: Request , res: Response) => {
     // grab username/pass from request body with object destructuring
     const { username, password } = req.body;
 
@@ -42,7 +42,7 @@ router.post('/signup', async (req, res) => {
 });
 
 // find matching user credentials (unsure best practices of status' to return)
-router.post('/login', async (req, res) =>  {
+router.post('/login', async (req: Request, res: Response) =>  {
     // grab username/pass from request body with object destructuring
     const { username, password } = req.body;
 
@@ -57,9 +57,9 @@ router.post('/login', async (req, res) =>  {
             const match = await bcrypt.compare(password, hashedPass as string);
 
             if (match) {
-                res.status(200).json({ message: "successful login!"});
+                res.status(200).json({ message: "Successful login!"});
             } else {
-                res.status(200).json({ message: "incorrect password"});
+                res.status(200).json({ message: "Incorrect password"});
             }
         }
     } catch (e) {
